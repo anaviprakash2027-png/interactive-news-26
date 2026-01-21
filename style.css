@@ -1,0 +1,66 @@
+#article {
+    border: solid 1px grey
+}
+
+h1 { /* headline font and color */ 
+    font-size: 2em;
+    color: black
+}
+
+
+#byline {  /* byline format + font to make the story more easily readable */
+    font-style: italic;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+  
+body { /* body oriented to the center of the screen */ 
+    width:50%;
+    margin: auto;
+}
+
+.caption { /* photo caption color, font size  */ 
+    color: rgb(103, 103, 134);
+    font-size: .9em
+}
+
+.credit{ /* photo credit color, font size and weight */ 
+    font-style: italic;
+    color: rgb(103, 103, 134);
+    font-size: .9em
+}
+
+
+ul { /* list margins */ 
+    margin-left: 15%;
+    margin-right: 15%; 
+    
+}
+
+aside { /* from html markdown to create a sidebar */ 
+    width: 100%;
+    text-align: left; 
+    box-shadow: inset 4px 0 5px -5px blueviolet;
+    color: blueviolet;
+    font-style: bold;
+}
+
+#context{ /* text of the sidebar */ 
+    color: grey;
+    font-style: bold;
+    font-size: 1em; 
+    text-align: left;
+}
+
+blockquote{ 
+    background-color: #ededed;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+/* if phone, then */
+@media (orientation: portrait) {
+ body {
+    width: 90%;
+    font-size: 2em;
+ }
+}
