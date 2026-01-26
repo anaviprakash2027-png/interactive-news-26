@@ -36,7 +36,7 @@ ul { /* list margins */
     
 }
 
-aside { /* from html markdown to create a sidebar */ 
+details { /* from html markdown to create a sidebar */ 
     width: 100%;
     text-align: left; 
     box-shadow: inset 4px 0 5px -5px blueviolet;
@@ -55,6 +55,7 @@ blockquote{
     background-color: #ededed;
     border-radius: 5px;
     font-size: 1.5em;
+    font-style: italic;
 }
 
 /* if phone, then */
