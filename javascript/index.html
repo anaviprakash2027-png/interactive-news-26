@@ -1,0 +1,147 @@
+<html>
+<head>
+  <title>SNOW SNOW SNOW</title>
+  <style>
+    html, body { margin:0; padding:20px; height:100%; } /* setting up file dimensions */
+    button { padding:10px 20px; margin:5px; font-size:18px; background: rgb(211, 211, 225) } /* setting up buttom appearance */
+
+    /* setting up snowfall amount classes' appearance */
+    .zero { background: rgb(235, 235, 133); color:#000; } 
+    .one_three  { background:lightskyblue; color:#fff; }
+    .four_six { background:rgb(104, 172, 215); color:#fff; }
+    .seven_nine { background:rgb(92, 146, 180); color:#fff; }
+    .ten_twelve { background:rgb(60, 95, 116); color:#fff; }
+    .thirteen_fifteen { background:rgb(22, 39, 50); color:#fff; }
+
+    /* style for item class -- changed font size and font */
+    .item {
+      padding:15px; margin:10px 0;
+      border-radius:5px;
+      font-size:1.75em;  
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    /* make buttons a filter */
+    .item.hidden { display:none; }
+
+
+    /* font size, color of page title */
+    h1 {
+      font-size: 2em; 
+      color: rgb(22, 39, 50);
+    }
+
+  /* font, font style of dropdown descriptions */
+  .snow {
+    font-size: 0.75em;
+    font-style: italic;
+  } 
+
+  /* font, font style for filter button description  */
+  #descrip{
+    font-size: 1em; 
+    font-style: italic;
+
+  }
+/* compatibility with phone dimensions */
+@media (orientation: portrait) {
+ body {
+    width: 90%;
+    font-size: 2em;
+ } }
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- heading for the page --> 
+<h1> Cities across U.S. see snowfall on Jan. 24-26 weekend </h1>
+
+<!-- context graf for the filter button --> 
+<p> Central and eastern U.S. saw snow and frigid temperatures from Jan. 24-26. According to the <a href="https://www.weather.gov/lot/2026_01_24-25_WinterStorm">National Weather Service</a>, the winter storm was due to Arctic air meeting a "substantial amount" of moisture from the Gulf and Pacific Ocean. </p>
+
+<!-- filter button tool title--> 
+  <h3> Last snow fall for U.S. cities from Jan. 24-26.</h3>
+
+<!-- filter button instructions/description --> 
+  <p id = "descrip"> Click on a button to see which cities saw each amount of snow. Click on a city to see details of how much snow it received and when the last snowfall between Jan. 24-26 occurred. </p>
+
+  <!-- button set up for each category of snowfall --> 
+  <button onclick="filter('all')">All</button> <!-- all cities --> 
+  <button onclick="filter('zero')">No Snow</button> <!-- cities with no snow --> 
+  <button onclick="filter('one_three')">1-3 Inches</button> <!-- cities with 1-3 inches --> 
+  <button onclick="filter('four_six')">4-6 Inches</button> <!-- cities with 4-6 inches --> 
+  <button onclick="filter('seven_nine')">7-9 Inches</button> <!-- cities with 7-9 inches --> 
+  <button onclick="filter('ten_twelve')">10-12 Inches</button> <!-- cities with 10-12 inches --> 
+  <button onclick="filter('thirteen_fifteen')">13-15 Inches</button> <!-- cities with 13-15 inches --> 
+
+
+  <!-- dropdowns for each city: summary is the city name, the dropdown information is how much snow the city got and when the snowfall occurred; class is based on snowfall amount --> 
+
+  <!-- cities that got zero snow --> 
+  <details class="item zero"><summary>Miami, FL</summary>
+  <div class = "snow"> 0 inches </div></details>
+
+  <details class="item zero"><summary>Los Angeles, CA</summary>
+  <div class = "snow"> 0 inches </div></details>
+
+  <details class="item zero"><summary>Phoenix, AZ</summary>
+  <div class = "snow"> 0 inches </div></details>
+
+  <!-- cities that got 1-3 inches of snow --> 
+  <details class="item one_three"><summary>Baltimore, MD</summary>
+    <div class = "snow"> 1.7 inches on Jan. 26 </div></details>
+
+  <details class="item one_three"><summary>Fort Worth, TX</summary>
+  <div class = "snow"> 0.2 inches on Jan. 26</div></details>
+
+  <details class="item one_three"><summary>Charleston, WV</summary>
+  <div class = "snow"> 1 inch on Jan. 25</div></details>
+
+  <details class="item one_three"> <summary>Santa Fe, NM</summary>
+  <div class = "snow"> 1.2 inches on Jan. 25</div></details>
+
+  <!-- cities that got 4-6 inches of snow --> 
+  <details class="item four_six"><summary>Philadelphia, PA</summary>
+  <div class = "snow"> 5.1 inches on Jan. 25</div></details>
+
+  <details class="item four_six"><summary>Kansas City, MO</summary>
+  <div class = "snow"> 4 inches on Jan. 25</div></details>
+
+  <!-- cities that got 10-12 inches of snow --> 
+  <details class="item ten_twelve"><summary>Chicago, IL</summary>
+  <div class = "snow"> 10.5 inches on Jan. 25</div></details>
+
+  <details class="item ten_twelve"><summary>New York City, NY</summary>
+  <div class = "snow"> 10.3 inches on Jan. 25</div></details>
+
+  <details class="item ten_twelve"><summary>Indianapolis, IN</summary>
+  <div class = "snow"> 10.5 inches on Jan. 25</div></details>
+
+  <details class="item ten_twelve"><summary>Little Rock, AK</summary>
+  <div class = "snow"> 11 inches on Jan. 24</div></details>
+  
+  <!-- cities that got 13-15 inches of snow --> 
+  <details class="item thirteen_fifteen"><summary>Boston, MA</summary>
+  <div class = "snow"> 15 inches on Jan. 25</div></details>
+
+  <!-- data citation --> 
+  <h4> Data from <a href="https://www.weather.gov/source/crh/snowmap.html">National Weather Service</a> from Jan. 24-26.</h4>
+
+  <script> 
+   /* function to apply the filter buttons to each city dropdown depending on which button is clicked; filter is based on class */
+    function filter(cat) {
+      let items = document.querySelectorAll('.item'); 
+      items.forEach(item => {
+        if (cat === 'all' || item.classList.contains(cat)) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
