@@ -1,4 +1,9 @@
 
+body { /* body oriented to the center of the screen */ 
+    width:50%;
+    margin: auto;
+}
+
 /* change h1 color */
 h1{
     font-size: 2em;
