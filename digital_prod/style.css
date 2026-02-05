@@ -1,0 +1,50 @@
+
+/* change h1 color */
+h1{
+    font-size: 2em;
+    color: rgb(9, 55, 100) 
+}
+
+/* change h2 color */
+h2{
+   color: rgb(45, 88, 132) 
+}
+
+/* byline style */
+#byline{
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* caption for photo: italic and gray */
+.caption {
+    font-style: italic;
+    color: grey;
+}
+
+/* make blockquote stand out */
+blockquote{
+    background-color: rgb(179, 209, 238);
+}
+
+/* highlight the dropdown */
+details{
+    background-color:rgb(179, 209, 238);
+    font-weight: bold;
+}
+
+/* center the text for the jump links */
+#buttons{
+    text-align: center;
+}
+
+#reflection{
+    font-size: 0.85em;
+}
+
+/* if phone, then */
+@media (orientation: portrait) {
+ body {
+    width: 90%;
+    font-size: 2em;
+ } }
