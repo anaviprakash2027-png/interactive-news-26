@@ -1,0 +1,38 @@
+/* body centering and media orientation!!!!!! */
+
+body{
+    margin: 25%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#header{
+    font-style: italic;
+    font-size: 2em;
+    color: rgb(250, 239, 140);
+    background-color: rgb(228, 66, 188);
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+blockquote{
+    background-color: rgb(250, 239, 140);
+    border:10px;
+    border-color: black;
+}
+
+.item {
+    flex-grow: 1;
+}
+
+#intro {
+
+}
+
+#headshot {
+    width: 100%;
+    
+}
