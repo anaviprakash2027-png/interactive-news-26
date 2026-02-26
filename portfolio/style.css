@@ -43,6 +43,9 @@ body{
     text-align: center;
 }
 
+h1{
+  font-size: 2em;
+}
 
 .container{
     display: flex;
@@ -76,9 +79,8 @@ blockquote{
 
 #headshot {
     width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
+    margin: auto;
+    display: block;
 }
 
 #intro {
@@ -132,8 +134,13 @@ footer{
     border:10px;
     border-color: black;
     background-color: rgb(242, 170, 224);
-    width: 200px;
-    height: 800px;
+    width: 800px;
+    height: 900px;
+}
+
+.container{
+  flex-direction: column;
+
 }
 }
 
