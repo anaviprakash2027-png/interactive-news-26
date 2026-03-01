@@ -1,11 +1,9 @@
 <head>
   <link href="style.css" type="text/css" rel="stylesheet" />
-</head>
-
-<script src="script.js"></script> 
+</head> <!-- link style css file -->   
 
 <body>
-  <div class="navbar">    
+  <div class="navbar"> <!-- link nav bar buttons to each page -->   
     <div class="nav-buttons">
       <a href="index.html" class="nav-item">Home</a>
       <a href="print.html" class="nav-item">Print Reporting</a>
@@ -13,17 +11,26 @@
       <a href="interactive.html" class="nav-item">Interactive Story</a>
     </div>
 
-      <div class="nav-item hamburger">☰</div>
-  </div>
-    
-  </div>
+      <div class="nav-item hamburger">☰</div> <!-- show hamburger as nav bar menu -->
+  </div> <!-- close out nav bar -->
 
-<h1> Evanston residents seek improved cycling accessiblity through city Bike Plan update</h1>
-<byline> By Anavi Prakash </byline>
+<script> /* javascript to activiate hamburger menu */ 
+    document.querySelector('.hamburger').onclick = () => {
+      document.querySelector('.nav-buttons').classList.toggle('active')
+    }
+  </script>
+  
+<!-- INTERACTIVE STORY -->   
+<h1> Evanston residents seek improved cycling accessiblity through city Bike Plan update</h1> <!-- story headline -->
+<byline> By Anavi Prakash </byline> <!-- byline -->
+<br> 
 
-<!-- TKTTKKT IMAGE! -->
+<!-- BEGINNING OF STORY -->
+<video width= "100%" height="240" autoplay muted> <source src="bikeplanvid.mp4" type="video/mp4"> </video> <!-- animation video of biker -->
+<p class = "credit"> An animation showing a biker ride in a bike lane. Animation created by Anavi Prakash on Canva.</p>
 
-<!-- [jump to story section] -->
+<details> <summary> Jump to a section of the story </summary>
+<p id = "buttons"> <a href="#revision">The old Bike Plan</a> | <a href = "#feedback"> Community input</a> </p> </details> <!-- link headers to text-->
 
 <p>Evanston’s Mack’s Bike & Goods was one of several hosts of a “We Ride in Unity” event across the nation on Jan. 31, leading a bike ride protesting the shooting of Alex Pretti by Customs and Border Protection agents in Minneapolis earlier that week.</p>
 
@@ -43,6 +50,18 @@
 
 <p>She said there is “so much potential” within the Bike Plan update to make it easier for parents to teach their children how to ride in Evanston on bikes. As her son learns how to navigate the city on his bicycle, she said she has to explain when to be on the sidewalk, how to avoid pedestrians and when to be in the bike lane compared to the road.</p> 
 
+<p> For instance, just two blocks away from each other, Chicago Avenue has a protected bike lane, whereas Church Street largely as bike lane designations painted on the road.</p>
+
+<!-- photo gallery of different types of bike lanes -->
+<div class="container"> <!-- container to show them side by side  -->
+  <div class="item"> <!-- photo 1 -->
+  <img src="protect.jpeg" width="100%" alt="A cyclist in a protected bike lane as cars drive by on the road.">
+  <p class="credit"> A cyclist rides in a protected bike lane on Chicago Avenue. Photo by Anavi Prakash. </p> </div> <!-- close out photo 1 w/ caption -->
+  <div class="item"> <!-- photo 2 -->
+  <img src="road.jpeg" width="91%" height="90.5%" alt="A cyclist on the road by a storefront with a sign that reads 'Colectivo Coffee'"> 
+  <p class="credit"> A cyclist rides on the road on Church Street. Photo by Anavi Prakash. </p></div> <!-- close out photo 2 w/ caption -->
+  </div> <!-- close out container -->
+
 <p>McCormick first-year Andrew Hunt has similar memories of learning how to ride a bike in St. Louis. Having several cyclists in his family, including his dad, Hunt learned the skill when he was five years old. By middle school, he could ride without using his hands.</p>
 
 <p>For him, Evanston’s bike paths are already much better than the ones at home because the paths — especially those going along Lake Michigan — are more continuous than what he is used to, and they have clearer signage.</p>
@@ -53,33 +72,33 @@
 
 <p>He added that his ideal bike infrastructure would involve redesigning roads to be “slower moving” and aimed at smaller vehicles.</p>
 
-<h2>Bike Plan update seeks to revise 12 year old goals</h2>
+<h2 id="revision">Bike Plan update seeks to revise 12 year old goals</h2> <!-- section header -->
 
 <p>For its Bike Plan update, the city plans to use millions in funding from the Illinois Transportation Enhancement Program and the Chicago Metropolitan Agency for Planning to improve biking conditions on Chicago Avenue and Church Street.</p>
 
-<p><p>The Church Street Pedestrian and Bicycle Improvements project, set to begin in 2027, will add two-way bike lanes on the street from Dodge Avenue to the city’s western border as well as create a shared use trail from Church Street to Harbert Park.</p>
+<p>The Church Street Pedestrian and Bicycle Improvements project, set to begin in 2027, will add two-way bike lanes on the street from Dodge Avenue to the city’s western border as well as create a shared use trail from Church Street to Harbert Park.</p>
 
-The Chicago Avenue Multimodal Corridor Improvements project, slated to begin in 2028, focuses on the area between Howard Street and Davis Street on Chicago Avenue, where two-way protected bike lanes will be added.</p>
+<p>The Chicago Avenue Multimodal Corridor Improvements project, slated to begin in 2028, focuses on the area between Howard Street and Davis Street on Chicago Avenue, where two-way protected bike lanes will be added.</p>
 
-<img class="headshot" src="BIKE.png" alt="A map." width="75%" height=75%>
-<p class = "credit"> Photo courtesy of the City of Evanston.</p>
+<img id="plan" src="BIKE.png" alt="A map." width="75%" height=75%> <!-- photo of Evanston's current bike plan -->
+<p class = "credit"> Photo courtesy of the City of Evanston.</p> <!-- photo credit -->
 
 <p>The last Bike Plan update was in 2014 and drove improvement projects until 2022. Some of the largest improvements occurred on Chicago Avenue, near Northwestern University on Sheridan Road and near Evanston Township High School on Dodge Avenue.</p>
 
-<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vRBW1EAyMjg5D4vizGIhq1T1DDRy-KHOK8vcY5vYRBG0fF1t1H54N_VwobpQvJKyu3-6IlS-HsTk__q&font=Default&lang=en&initial_zoom=2&width=100%25&height=650' width='100%' height='75%' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vRBW1EAyMjg5D4vizGIhq1T1DDRy-KHOK8vcY5vYRBG0fF1t1H54N_VwobpQvJKyu3-6IlS-HsTk__q&font=Default&lang=en&initial_zoom=2&width=100%25&height=650' width='100%' height='75%' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe> <!-- timeline of 2014 bike plan changes -->
 
 <p>“This year's Bike Plan Update is a generational opportunity to build on this progress with the goal of a comprehensive bike network for all ages and abilities. We especially want older, younger, and less-confident bicyclists in Evanston to see cycling as a safe and viable transportation option,” Evanston Transit Alliance Communications Chair Robert Keding wrote in response to a request for comment.</p>
 
 <p>Keding also encouraged Northwestern community members, including those who commute to the University, to provide their feedback on the plan.</p>
 
-<h2>Community feedback sought through community meetings, online portal</h2>
+<h2 id="feedback">Community feedback sought through community meetings, online portal</h2> <!-- section header -->
 
 <p>As part of its data and feedback gathering, the city held a Bike the Ridge event in September, where residents could go on a community bike ride and provide feedback on the update to the Bike Plan. Then, in October, the city mobilized volunteers to stand at frequented intersections around the city to count how many bikes went by in a given timeframe.</p>
 
 <p>In January and February, some councilmembers hosted joint ward meetings for residents to provide feedback on the new plan. Wards 1, 6 and 7 will have a feedback session on March 3.</p>
 
 <p>The city also has an online portal where residents have submitted over 600 comments on where improvements can be made. The portal will close on March 15. Comments associated with a specific location in Evanston fall under the following categories:</p>
-<ul>
+<ul> <!-- list of feedback categories  -->
 <li>Location Is Stressful or Uncomfortable for Biking</li>
 <li>Bicycling / Pedestrian Improvement Opportunity</li>
 <li>Safety Issue</li>
@@ -89,9 +108,9 @@ The Chicago Avenue Multimodal Corridor Improvements project, slated to begin in 
 <li>Other/General Comment</li>
 </ul>
 
-<div class="flourish-embed flourish-chart" data-src="visualisation/27516588"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27516588/thumbnail" width="100%" height="25%" alt="visualization" /></noscript></div>
+<div class="flourish-embed flourish-chart" data-src="visualisation/27516588"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27516588/thumbnail" width="100%" height="25%" alt="visualization" /></noscript></div> <!-- flourish bar graph of comments from the city's feedback portal -->
 
-<p>One large area of concern for residents is Main Street, which has one east-west corridor.</p>
+<p>A large area of concern for residents is Main Street, which has one east-west corridor.</p>
 
 <p>“It’s an old street, and it’s not wide enough,” Evanston resident Mike Moran said at a ward meeting. “We don’t want to mow down all the trees, so that’s a problem.”</p>
 
@@ -113,12 +132,12 @@ The Chicago Avenue Multimodal Corridor Improvements project, slated to begin in 
 
 <p>In terms of next steps, the city plans to begin reviewing data and community input to finalize its next course of action.</p>
 
-<hr color= "black">
-    <footer>
+<hr color= "black"> <!-- black divider line -->
+    <footer> <!-- footer -->
        <h2>anaviprakash2027@u.northwestern.edu</h2>
     </footer>
 
-</body>
+</body> <!-- end of page -->
 
 
 

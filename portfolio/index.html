@@ -1,74 +1,75 @@
 <head>
   <link href="style.css" type="text/css" rel="stylesheet" />
-</head>
+</head> <!-- connect css file for style -->
 
-<script src="script.js"></script> 
-
-<body>
-  <div class="navbar">    
-    <div class="nav-buttons">
+  <body> <!-- start of page -->
+  <div class="navbar">  <!-- header navigation buttons -->
+    <div class="nav-buttons"> <!-- link each page to a button -->
       <a href="index.html" class="nav-item">Home</a>
       <a href="print.html" class="nav-item">Print Reporting</a>
       <a href="audio.html" class="nav-item">Audio Reporting</a>
       <a href="interactive.html" class="nav-item">Interactive Story</a>
-    </div>
+    </div> <!-- close nav-buttons -->
 
-      <div class="nav-item hamburger">☰</div>
-  </div>
-    
-  </div>
+      <div class="nav-item hamburger">☰</div> <!-- show hamburger as nav bar menu -->
+  </div> <!-- close nav bar -->
 
-    <h1 id = "header">Going big because we all go home at some point. </h1>
+    <script> /* javascript to activiate hamburger menu */ 
+    document.querySelector('.hamburger').onclick = () => {
+      document.querySelector('.nav-buttons').classList.toggle('active')
+    }
+  </script>
 
-    <img class ="headshot" src="Anavi Prakash.jpg" alt = "A person" width = 50%>
+    <h1 id = "header">Going big because we all go home at some point. </h1> <!-- header at the top of the home page -->
 
-    <br>
+    <img class ="headshot" src="Anavi Prakash.jpg" alt = "A person" width = 50%> <!-- add headshot as second element -->
 
+    <br> <!-- line break -->
+
+    <!-- bio section -->
     <p id = "intro">My name is Anavi Prakash, and I am a junior at Northwestern University studying journalism and social policy with a minor in data science. I primarily have experience in print and audio reporting, but love everything that brings text and multimedia elements together.</p>
 
     <p id = "intro">In all my reporting, I like to think big and engage the community in the stories I’m telling, whether during the reporting process or when looking at the final product. If we aren’t reporting for the community, then what’s the point?</p>
 
     <p id ="contact"> You can reach me at anaviprakash2027@u.northwestern.edu. I look forward to hearing from you!</p>
 
-    <hr color = "black">
+    <hr color = "black"> <!-- black divider line-->
 
 
-
+  <!-- featured work section -->
   <h1> Featured work </h1>  
-  <div class="container">
-  <div class = item>
-  <blockquote> 
-    <img src="SDRP.jpg" alt="A school with an apple in front of it and three cash bills next to it" width=100%>
-   <p class="credit"> Illustration by Siri Reddy for The Daily Northwestern</p>
-    <p class="title"><a href="https://dailynorthwestern.com/2025/09/29/top-stories/district-65-will-announce-its-school-closure-and-consolidation-scenarios-committee-members-shed-light-on-the-process/">District 65 will announce its school closure and consolidation scenarios. Committee members shed light on the process.</a></p>
-    <!-- publication + date -->
-     <p class="pub"> The Daily Northwestern, Sept. 29, 2025 </p>
+  <div class="container"> <!-- contain each story to show them side by side in a row -->
+  <div class = item> <!--story 1 -->
+  <blockquote> <!-- box for story -->
+    <img src="SDRP.jpg" alt="A school with an apple in front of it and three cash bills next to it" width=100%> <!-- story image -->
+   <p class="credit"> Illustration by Siri Reddy for The Daily Northwestern</p> <!-- image credit -->
+    <p class="title"><a href="https://dailynorthwestern.com/2025/09/29/top-stories/district-65-will-announce-its-school-closure-and-consolidation-scenarios-committee-members-shed-light-on-the-process/">District 65 will announce its school closure and consolidation scenarios. Committee members shed light on the process.</a></p> <!-- headline -->
+     <p class="pub"> The Daily Northwestern, Sept. 29, 2025 </p> <!-- publication + date -->
   </blockquote>
-</a>
-</div>
+</div> <!-- close off story 1-->
 
-<div class = "item">
+<div class = "item"> <!-- story 2 -->
    <blockquote> 
    <img src="BGM.JPG" alt="A person looking at a painting on a canvas" width="100%">
     <p class="credit"> Photo by Anavi Prakash for The Daily Northwestern</p> 
     <p class = "title"><a href="https://dailynorthwestern.com/2025/05/08/audio/everything-evanston-black-girl-magic-book-club-embraces-identities-through-literary-representation/">Everything Evanston: Black Girl Magic Book Club embraces identities through literary representation</a></p>
     <p class="pub"> The Daily Northwestern, May 8, 2025</p>
   </blockquote>
-</div>
+</div> <!--close off story 2 -->
 
-<div class="item">
+<div class="item"> <!-- story 3 -->
    <blockquote> 
     <img src="ECH.jpg" alt="The front of a building" width="100%">
      <p class="credit"> Photo by Isaiah Steinberg for The Daily Northwestern</p>
     <p class = "title"><a href="https://dailynorthwestern.com/2025/09/08/lateststories/federal-immigration-agents-expected-in-evanston-in-coming-days-city-says/">Federal immigration agents expected in Evanston in ‘coming days,’ city says</a></p>
     <p class="pub"> The Daily Northwestern, Sept. 8, 2025</p>
   </blockquote>
-</div>
-    </div>
+</div> <!-- close off story 3 -->
+    </div> <!-- close off container -->
 
-<hr color= "black">
-    <footer>
+<hr color= "black"> <!-- black divider line -->
+    <footer> <!-- footer with email -->
        <h2>anaviprakash2027@u.northwestern.edu</h2>
     </footer>
 
-</body> 
+</body> <!-- close page -->

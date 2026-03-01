@@ -83,6 +83,12 @@ blockquote{
     display: block;
 }
 
+#plan {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
 #intro {
   font-size: 1.5em;
 }
@@ -128,6 +134,13 @@ footer{
 
  .hamburger {
   display: block;
+}
+
+#plan {
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    display: block;
 }
 
  blockquote{

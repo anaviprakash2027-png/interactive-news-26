@@ -1,69 +1,66 @@
 <head>
   <link href="style.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
-  <div class="navbar">    
+</head> <!-- link style css file -->
+
+<body>   <!-- start of page -->
+  <div class="navbar">  <!-- link navigation menu to pages -->  
     <div class="nav-buttons">
       <a href="index.html" class="nav-item">Home</a>
       <a href="print.html" class="nav-item">Print Reporting</a>
       <a href="audio.html" class="nav-item">Audio Reporting</a>
       <a href="interactive.html" class="nav-item">Interactive Story</a>
-    </div>
+    </div> <!-- close out buttons -->
 
-      <div class="nav-item hamburger">☰</div>
-  </div>
-    
-  </div>
+      <div class="nav-item hamburger">☰</div> <!-- use hamburger as menu symbol -->
+  </div> <!-- close out nav bar -->
 
-  <script>
+  <script> /* javascript to activiate hamburger menu */ 
     document.querySelector('.hamburger').onclick = () => {
-      document.querySelector('.nav-buttons').classList.toggle('active');
-    };
+      document.querySelector('.nav-buttons').classList.toggle('active')
+    }
   </script>
 
-
-<h1>Print reporting </h1>
+<h1>Print reporting </h1> <!-- title at top of page -->
+<!-- introduction blurb -->
 <p class="blurb"> While my primary beat has always been education, I have reported on breaking local news, immigration and community events, among other areas. I have bylines in The Daily Northwestern, Midstory, the Pittsburgh Post-Gazette and ProPublica. </p>
 
-<hr color= "black">
+<hr color= "black"> <!-- black divider line -->
 
+<!-- featured work section -->
 <h1 id = "header">Featured work </h1> 
-  <div class="container">
-  <div class = item>
-  <blockquote> 
-    <img src="COAL.png" alt="A person holding up their right arm with a tattoo on it." width=100%>
-    <p class="credit"> Photo by Victoria Malis for the Pittsburgh Post-Gazette</p>
-    <p class="title"><a href="https://www.post-gazette.com/news/health/2025/04/09/coal-warning-cuts-in-miner-niosh-west-virginia/stories/202504090077">Coal miners' health and safety on the chopping block amid drastic staffing cuts</a></p>
-    <!-- publication + date -->
-     <p class="pub"> Pittsburgh Post-Gazette, April 9, 2025 </p>
+  <div class="container"> <!-- container for stories to show in a row -->
+  <div class = item> <!-- story 1 -->
+  <blockquote> <!-- story box -->
+    <img src="COAL.png" alt="A person holding up their right arm with a tattoo on it." width=100%> <!-- story image -->
+    <p class="credit"> Photo by Victoria Malis for the Pittsburgh Post-Gazette</p> <!-- image credit-->
+    <p class="title"><a href="https://www.post-gazette.com/news/health/2025/04/09/coal-warning-cuts-in-miner-niosh-west-virginia/stories/202504090077">Coal miners' health and safety on the chopping block amid drastic staffing cuts</a></p> <!-- story headline -->
+     <p class="pub"> Pittsburgh Post-Gazette, April 9, 2025 </p> <!-- publication + date -->
   </blockquote>
-</a>
-</div>
+</div> <!-- close out story 1 -->
 
-<div class = "item">
+<div class = "item"> <!-- story 2 -->
    <blockquote> 
    <img src="ICE.jpg" alt="A hand holding a badge that says 'ICE OFFICER' in front of buildings." width="100%">
     <p class="credit"> Illustration by Siri Reddy for The Daily Northwestern</p> 
     <p class = "title"><a href="https://dailynorthwestern.com/2025/09/10/city/evanston-community-rallies-amid-federal-immigration-crackdowns/">Evanston community rallies amid federal immigration crackdowns</a></p>
     <p class="pub"> The Daily Northwestern, September 10, 2025</p>
   </blockquote>
-</div>
+</div> <!-- close out story 2 -->
 
-<div class="item">
+<div class="item"> <!-- story 3 -->
    <blockquote> 
     <img src="D65.jpg" alt="The front of a building" width="100%">
      <p class="credit"> Photo by Ilana Arougheti for The Daily Northwestern</p>
     <p class = "title"><a href="https://dailynorthwestern.com/2025/10/09/top-stories/former-d65-superintendent-devon-horton-federally-indicted/">Former D65 Superintendent Devon Horton indicted on 17 counts of embezzlement, fraud</a></p>
     <p class="pub"> The Daily Northwestern, Oct. 9, 2025</p>
   </blockquote>
-</div>
-    </div>
+</div> <!-- close out story 3 -->
+    </div> <!-- close out story container -->
 
-<hr color= "black">
+<hr color= "black"> <!-- black divider line -->
 
- <footer>
+ <footer> <!-- footer -->
        <h2>anaviprakash2027@u.northwestern.edu</h2>
     </footer>
 
-
-</body>
+</body> <!-- end of page -->
